@@ -59,12 +59,13 @@ gazpacho.ingredients.create([
   {name: "sal", quantity: 1, unit: "Pizca"}
   ])
 
-sopa_castellana = Meal.create(name: "Sopa Castellana", description: "Doramos (poco a poco, con fuego muy bajito) los ajos. Yo los pongo enteros, aunque partidos por la mitad, para que suelten más sabor. También se pueden poner laminados.
-Cuando empiecen a estar un poco dorados (cuidado que no se quemen) añadimos el jamón cortado en trocitos pequeñitos, retiramos del fuego y echamos las rebanadas de pan (si es duro mejor, pero si no también sirve baguette o barra del día).
+sopa_castellana = Meal.create(name: "Sopa Castellana", description: "Doramos (poco a poco, con fuego muy bajito) los ajos. Yo los pongo enteros, aunque partidos por la mitad, para que suelten más sabor.
+Cuando empiecen a estar un poco dorados (cuidado que no se quemen) añadimos el jamón cortado en trocitos pequeñitos.
+Retiramos del fuego y echamos las rebanadas de pan (si es duro mejor, pero si no también sirve baguette o barra del día).
 Empapamos el pan en el aceite (que lo chupe) y espolvoreamos pimentón.
-Ponemos de nuevo en el fuego (siempre bajo-medio) y echamos el agua y la pastilla de caldo. Tenemos en el fuego unos 10-15 minutos.
+Ponemos de nuevo en el fuego (siempre bajo-medio) y echamos el agua y la pastilla de caldo. Tenemos en el fuego unos 10 minutos.
 Añadimos los huevos, con cuidado para que no se rompan, pero sin complicación. Según la fuerza del fuego, en un máximo de dos minutos estarán listos.
-También, en caso de que nos guste la sopa algo más espesa, se puede añadir algún huevo más y reventarlo una vez cuajada la clara.", photo: "http://res.cloudinary.com/angupe/image/upload/v1475066329/sopa-ajo-castellana_r5a33o.jpg")
+También, en caso de que nos guste la sopa algo más espesa, se puede añadir algún huevo más y reventarlo una vez cuajada la clara.", photo: "http://res.cloudinary.com/angupe/image/upload/v1475066329/sopa-ajo-castellana_r5a33o.jpg", category: "Sopas y cremas", time: "20 minutos", difficulty: "Fácil", serves: "2 Personas")
 
 sopa_castellana.ingredients.create([
   {name: "pan", quantity: 4, unit: "Rebanadas"},
@@ -72,6 +73,6 @@ sopa_castellana.ingredients.create([
   {name: "jamon serrano", quantity: 3, unit: "Lonchas"},
   {name: "ajo", quantity: 6, unit: "Dientes"},
   {name: "caldo de carne", quantity: 1, unit: "pastilla"},
-  {name: "pimenton", quantity: 1, unit: "cucharada"},
+  # {name: "pimenton", quantity: 1, unit: "cucharada"},
   {name: "aceite", quantity: 50, unit: "ml"}
   ])

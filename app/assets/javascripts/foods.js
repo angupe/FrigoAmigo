@@ -32,7 +32,7 @@ function getMealFromDB(){
 
 function showMeals(response) {
       console.log(response);
-
+      $('.js-floating-box').empty();      
       for ( i = 0; i < response.meal_object.length; i++ ) {
         var image = response.meal_object[i]['photo']
         var foodName = response.meal_object[i].name

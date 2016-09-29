@@ -4,14 +4,12 @@ class FoodsController < ApplicationController
 
   def compare
     @foods_id = Food.where(name: params[:foodName]).pluck(:id)
-    @foods_id.each do |f|
-      @meals_id = Ingredient.where(food_id: f).pluck(:meal_id)
-      @meals_id.uniq
-    end
+    @meals_id = Ingredient.where(food_id: @foods_id).pluck(:meal_id).uniq
+
     meal = []
     @meals_id.each do |meal_id|
       if((Meal.find(meal_id).ingredients.map.pluck(:food_id) - @foods_id).empty?)
-        meal << Meal.find(meal_id)
+          meal << Meal.find(meal_id)
       end
     end
     render json: { meal_object: meal }
