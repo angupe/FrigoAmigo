@@ -1,0 +1,48 @@
+  <div class="row bgheader">
+    <div class="col-md-12 bgblack bgsearch">
+    <p id="notice"><%= notice %></p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <h2 class="animated bounce">¿Qué alimentos tienes?</h2>
+                </div>
+              </div>
+              <%= form_tag(foods_path, :method => "get", id: "search-form") do %>
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <div class="input-group input-group-lg">
+                      <%= text_field_tag :search, params[:search], class: "input-lg form-control search-query", placeholder: "Tengo en mi nevera...", type: "search", data: {autocomplete: foods_autocomplete_food_name_path} %>
+                      <span class="input-group-btn">
+                        <%= submit_tag "Añadir", class: 'js-search-food btn btn-success' %>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-12 -->
+                </div>
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h5 id="log"></h5>
+                  </div>
+                </div>
+                <% end %>
+                <script type="text/javascript" charset="utf-8">
+                 $('#search').bind('railsAutocomplete.select', function(event, data){
+                  $('#search-form').submit()
+                 });
+                </script>
+          </div><!--END class="col-md-6 col-offset-3"-->
+        </div><!--END .row -->
+      </div><!--END .container -->
+  </div><!--END class="col-md-12 bgblack"-->
+</div><!--END  class="row bgheader"-->
+
+<div class="row">
+  <div class="col-md-12 bgresults">
+    <div class="container">
+      <div class="row js-floating-box">
+        <h3 class="hide">Te sugerimos:</h3>
+      </div>
+    </div>
+  </div>
+</div>

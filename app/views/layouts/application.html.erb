@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FrigoAmigo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/sweetalert2/5.0.7/sweetalert2.min.js" />
+    <link href="https://cdn.jsdelivr.net/sweetalert2/5.0.7/sweetalert2.min.css" />
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container">
+          <div class="text-left col-md-6 logo">
+            <a href="/"><img src="/assets/frigoamigo.png"></a>
+          </div>
+          <div id="top_bar" class="text-right col-md-6">
+            <% if user_signed_in? %>
+              <p>
+                <div class="btn-group btn-group-justified headerlink" role="group">
+                  <%= link_to 'Sign out', destroy_user_session_path, method: 'DELETE' %>
+                </div>
+              </p>
+            <% else %>
+              <p>
+                <div class="btn-group btn-group-justified headerlink" role="group">
+                  <%= link_to 'Sign up', new_user_registration_path %> |
+                  <%= link_to 'Log in', new_user_session_path %>
+                </div>
+              </p>
+            <% end %>
+          </div><!-- top_bar-->
+        </div><!-- container -->
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>
