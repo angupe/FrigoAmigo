@@ -1,19 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 users = User.create ([
   {name: "Raul", email: "raul@ironhack.com", password: "ironhack", password_confirmation: "ironhack"},
   {name: "Alex", email: "alex@ironhack.com", password: "ironhack", password_confirmation: "ironhack"},
   {name: "Alfonso", email: "alfonso@ironhack.com", password: "ironhack", password_confirmation: "ironhack"},
   {name: "Antonio", email: "tony@ironhack.com", password: "ironhack", password_confirmation: "ironhack"}
   ])
-
-
 
 tortilla_patatas = Meal.create(name: "Tortilla de patatas", description: "Pelamos y cortamos las patatas en trozos finos e irregulares.
 Cortamos la cebolla en cuadraditos pequeños. Mezclamos la cebolla con las patatas y salamos al gusto.
@@ -27,7 +17,6 @@ Cuando esté cuajada por ambos lados la retiramos a un plato. Se sirve caliente,
 tortilla_patatas.ingredients.create([
   {name: "patatas", quantity: 4, unit: "Grandes"},
   {name: "huevos", quantity: 6, unit: "M"},
-  {name: "cebolla", quantity: 1, unit: "Grande"},
   {name: "aceite", quantity: 150, unit: "ml"}
   ])
 
@@ -38,7 +27,6 @@ huevos_fritos.ingredients.create([
   {name: "patatas", quantity: 2, unit: "Grandes"},
   {name: "huevos", quantity: 2, unit: "M"},
   {name: "aceite", quantity: 150, unit: "ml"},
-  {name: "sal", quantity: 1, unit: "Pizca"}
   ])
 
 gazpacho = Meal.create(name: "Gazpacho", description: "Retira la corteza de las rebanadas de pan, córtalas en tiras y después en dados. Colócalos en el vaso de la batidora.
@@ -53,13 +41,12 @@ gazpacho.ingredients.create([
   {name: "pepino", quantity: 1, unit: "Pequeño"},
   {name: "pimiento verde", quantity: 1, unit: "Trozo"},
   {name: "ajo", quantity: 1, unit: "Diente"},
-  {name: "pan de molde", quantity: 3, unit: "Rebanadas"},
+  {name: "pan", quantity: 3, unit: "Rebanadas"},
   {name: "aceite", quantity: 3, unit: "Cucharadas"},
   {name: "vinagre", quantity: 1, unit: "Cucharadas"},
-  {name: "sal", quantity: 1, unit: "Pizca"}
   ])
 
-sopa_castellana = Meal.create(name: "Sopa Castellana", description: "Doramos (poco a poco, con fuego muy bajito) los ajos. Yo los pongo enteros, aunque partidos por la mitad, para que suelten más sabor.
+sopa_castellana = Meal.create(name: "Sopa castellana", description: "Doramos (poco a poco, con fuego muy bajito) los ajos. Yo los pongo enteros, aunque partidos por la mitad, para que suelten más sabor.
 Cuando empiecen a estar un poco dorados (cuidado que no se quemen) añadimos el jamón cortado en trocitos pequeñitos.
 Retiramos del fuego y echamos las rebanadas de pan (si es duro mejor, pero si no también sirve baguette o barra del día).
 Empapamos el pan en el aceite (que lo chupe) y espolvoreamos pimentón.
@@ -73,6 +60,6 @@ sopa_castellana.ingredients.create([
   {name: "jamon serrano", quantity: 3, unit: "Lonchas"},
   {name: "ajo", quantity: 6, unit: "Dientes"},
   {name: "caldo de carne", quantity: 1, unit: "pastilla"},
-  # {name: "pimenton", quantity: 1, unit: "cucharada"},
+  {name: "pimenton", quantity: 1, unit: "cucharada"},
   {name: "aceite", quantity: 50, unit: "ml"}
   ])
