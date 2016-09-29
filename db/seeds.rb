@@ -34,7 +34,7 @@ Limpia los tomates, con un cuchillo retírales el tallo, trocéalos a tu gusto y
 Pela el pepino (reserva un trozo), el diente de ajo y el pimiento, pícalos a tu gusto e introdúcelos con el resto de ingredientes.
 Vierte 1/2 l de agua, el aceite y el vinagre. Sazona a tu gusto y tritura con la batidora eléctrica con cuidado de no salpicar. Cuando consigas una crema homogénea, desenchufa la batidora.
 Pásalo por un colador, introduce en el frigorífico (1 hora, mínimo) para que se enfríe bien.
-En el momento de servir, pica el trocito de pepino reservado anteriormente en daditos y espolvorea la superficie.", photo: "http://res.cloudinary.com/angupe/image/upload/v1475065618/gazpacho_nodw3s.jpg")
+En el momento de servir, pica el trocito de pepino reservado anteriormente en daditos y espolvorea la superficie.", photo: "http://res.cloudinary.com/angupe/image/upload/v1475065618/gazpacho_nodw3s.jpg", category: "Sopas y cremas", time: "30 minutos", difficulty: "Media", serves: "2 Personas")
 
 gazpacho.ingredients.create([
   {name: "tomates", quantity: 6, unit: "Medianos"},
